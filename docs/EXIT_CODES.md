@@ -226,7 +226,7 @@ apt full-upgrade -y
 
 ### Reference
 
-Official discussion: [GitHub #8126](https://github.com/lengschder97/ProxmoxVE/discussions/8126)
+Official discussion: [GitHub #8126](https://github.com/community-scripts/ProxmoxVE/discussions/8126)
 
 ---
 
@@ -285,7 +285,7 @@ Official discussion: [GitHub #8126](https://github.com/lengschder97/ProxmoxVE/di
 
 Found an undocumented exit code or have a solution to share? Please:
 
-1. Open an issue on [GitHub](https://github.com/lengschder97/ProxmoxVE/issues)
+1. Open an issue on [GitHub](https://github.com/community-scripts/ProxmoxVE/issues)
 2. Include:
    - Exit code number
    - Error message
