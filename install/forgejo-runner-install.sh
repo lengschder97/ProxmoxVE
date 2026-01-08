@@ -12,6 +12,26 @@ setting_up_container
 network_check
 update_os
 
+# -------------------------------------------------
+# App-specific input (MUST be before variables)
+# -------------------------------------------------
+if [[ -z "$var_forgejo_instance" ]]; then
+  read -rp "Forgejo Instance URL (e.g. https://code.forgejo.org): " var_forgejo_instance
+fi
+
+if [[ -z "$var_forgejo_runner_token" ]]; then
+  read -rp "Forgejo Runner Registration Token: " var_forgejo_runner_token
+  echo
+fi
+
+if [[ -z "$var_forgejo_instance" || -z "$var_forgejo_runner_token" ]]; then
+  echo "❌ Forgejo instance URL and runner token are required."
+  exit 1
+fi
+
+export FORGEJO_INSTANCE="$var_forgejo_instance"
+export FORGEJO_RUNNER_TOKEN="$var_forgejo_runner_token"
+
 msg_info "Installing dependencies"
 $STD apt-get install -y \
   curl jq gnupg git wget ca-certificates \
